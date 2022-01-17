@@ -1,34 +1,4 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@pranzal2052 
-linuxacademy
-/
-cicd-pipeline-train-schedule-cd
-Public
-Code
-Issues
-2
-Pull requests
-42
-Actions
-Projects
-Wiki
-Security
-Insights
-cicd-pipeline-train-schedule-cd/Jenkinsfile
-@whboyd
-whboyd Implement CD pipeline
-Latest commit d605ba9 on May 3, 2018
- History
- 1 contributor
-74 lines (74 sloc)  3.25 KB
-   
-pipeline {
+  pipeline {
     agent any
     stages {
         stage('Build') {
@@ -43,7 +13,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                withCredentials([usernamePassword(credentialsId: 'webserver_login', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
+                withCredentials([usernamePassword(credentialsId: 'b469daa8-60cc-4e14-9b0c-3d6d0ea46535', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
                     sshPublisher(
                         failOnError: true,
                         continueOnError: false,
